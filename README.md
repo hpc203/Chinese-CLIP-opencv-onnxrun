@@ -11,6 +11,7 @@ Clip的玩法有很多种：
 对于图像生成模型，结合生成结果与输入文本间的 CLIP 距离生成更好的图片。例如，扩散模型里面就用到了clip。
 (4).CLIP Captioning
 利用 CLIP encoding 提取特征，以该特征的映射结果结合 GPT2 生成 caption。
+(5).搜索相似图片
 
 这里面我最感兴趣的是第二项：给出一句话来描述想要的图片，就能从图库中搜出来符合要求的。现在市场上已经有这个功能的软件了，例如这里
 https://github.com/mazzzystar/Queryable
