@@ -20,8 +20,9 @@ https://github.com/mazzzystar/Queryable
 在github上clip部署的程序，文本都是英文的，于是我就想着编写一套中文clip的图文检索程序。
 图像模块和文本模块的onnx文件在百度云盘，链接：https://pan.baidu.com/s/18eBA19kMqdJpP5muV9V18w 
 提取码：d30y
-程序很简陋，感兴趣的开发者可以添加一个图形界面，显示输入文字和图库中搜出来符合要求的图片，这样看起来更直观。
 
+
+程序很简陋，感兴趣的开发者可以添加一个图形界面，显示输入文字和图库中搜出来符合要求的图片，这样看起来更直观。
 目前这套程序我只编写了python的，c++的暂时没有编写。原因是在这套程序里有一个模块是clip_tokenizer，这是一个NLP领域的模块，
 而我一直是做图像视觉的，不了解clip_tokenizer这个模块的细节。而我在github上看到的clip_tokenizer的c++实现的代码，是针对英文的。
 中文的clip_tokenizer的c++实现的代码，有一个仓库里有 https://github.com/ozanarmagan/clip_tokenizer_cpp/blob/master/clip_tokenizer.cpp
