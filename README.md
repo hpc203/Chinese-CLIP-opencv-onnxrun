@@ -11,7 +11,7 @@ Clip的玩法有很多种：
 对于图像生成模型，结合生成结果与输入文本间的 CLIP 距离生成更好的图片。例如，扩散模型里面就用到了clip。
 (4).
 利用 CLIP encoding 提取特征，以该特征的映射结果结合 GPT2 生成 caption。
-(5).搜索相似图片
+(5).搜索相似图片。
 
 这里面我最感兴趣的是第二项：给出一句话来描述想要的图片，就能从图库中搜出来符合要求的。现在市场上已经有这个功能的软件了，例如这里
 https://github.com/mazzzystar/Queryable
@@ -23,6 +23,7 @@ https://github.com/mazzzystar/Queryable
 
 
 程序很简陋，感兴趣的开发者可以添加一个图形界面，显示输入文字和图库中搜出来符合要求的图片，这样看起来更直观。
+此外，计算特征向量之间的相似性，可以使用faiss库，它的速度非常快，是毫秒级的。
 目前这套程序我只编写了python的，c++的暂时没有编写。原因是在这套程序里有一个模块是clip_tokenizer，这是一个NLP领域的模块，
 而我一直是做图像视觉的，不了解clip_tokenizer这个模块的细节。而我在github上看到的clip_tokenizer的c++实现的代码，是针对英文的。
 中文的clip_tokenizer的c++实现的代码，有一个仓库里有 https://github.com/ozanarmagan/clip_tokenizer_cpp/blob/master/clip_tokenizer.cpp
