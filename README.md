@@ -21,10 +21,13 @@ https://github.com/mazzzystar/Queryable
 图像模块和文本模块的onnx文件在百度云盘，链接：https://pan.baidu.com/s/18eBA19kMqdJpP5muV9V18w 
 提取码：d30y
 
+这套程序有C++和Python两个版本的，其中在编写C++程序时，遇到了一个坑。起初在win10系统里，编写完代码之后编译运行，
+发现在TokenizerClipChinese里，切割中文字符串里的每个汉字时，出现了乱码，后来把程序放在ubuntu系统运行，就不会出现中文乱码了。
+切割中文字符串里的每个汉字的函数split_chinese，代码来自这里 https://github.com/Shellbye/Shellbye.github.io/issues/27
+从上面才到的这个坑，可以看出函数split_chinese，只适用于linux系统，在win10系统会出现乱码的。
+
 
 程序很简陋，感兴趣的开发者可以添加一个图形界面，显示输入文字和图库中搜出来符合要求的图片，这样看起来更直观。
-此外，计算特征向量之间的相似性，可以使用faiss库，它的速度非常快，是毫秒级的。
-目前这套程序我只编写了python的，c++的暂时没有编写。原因是在这套程序里有一个模块是clip_tokenizer，这是一个NLP领域的模块，
-而我一直是做图像视觉的，不了解clip_tokenizer这个模块的细节。而我在github上看到的clip_tokenizer的c++实现的代码，是针对英文的。
-中文的clip_tokenizer的c++实现的代码，有一个仓库里有 https://github.com/ozanarmagan/clip_tokenizer_cpp/blob/master/clip_tokenizer.cpp
-，里面有个is_chinese_char函数，判断字符是不是中文的。但是我下载程序之后，编译出错了。
+此外，保存特征特征向量和计算特征向量之间的相似性，可以使用faiss库，它的速度非常快，是毫秒级的。因为在真实世界里的相册，
+很有可能相册里的图片数量是百万级甚至是亿级的。
+
