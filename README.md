@@ -25,7 +25,7 @@ https://github.com/mazzzystar/Queryable
 发现在TokenizerClipChinese里，切割中文字符串里的每个汉字时，出现了乱码，后来把程序放在ubuntu系统运行，就不会出现中文乱码了。
 切割中文字符串里的每个汉字的函数split_chinese，代码来自这里 https://github.com/Shellbye/Shellbye.github.io/issues/27
 从上面才到的这个坑，可以看出函数split_chinese，只适用于linux系统，在win10系统会出现乱码的。
-并且还需要注意，在使用std::filesystem时，需要指定c++17来编译的。
+并且还需要注意，在使用std::filesystem时，需要指定c++17来编译的。本仓库里的C++程序，需要放在ubuntu系统编译运行，才能得到正确的结果。
 
 
 程序很简陋，感兴趣的开发者可以添加一个图形界面，显示输入文字和图库中搜出来符合要求的图片，这样看起来更直观。
