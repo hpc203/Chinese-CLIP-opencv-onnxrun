@@ -19,7 +19,7 @@ template<typename T> std::vector<int> argsort_ascend(const std::vector<T>& array
 {
     const int array_len(array.size());
     std::vector<int> array_index(array_len, 0);
-    for (int i = 0; i < array_len; ++i)
+    for (int i = 0; i < array_len; ++i)   ////std::iota(array_index.begin(), array_index.end(), 0);  ////不用for循环的方法
         array_index[i] = i;
 
     std::sort(array_index.begin(), array_index.end(),
